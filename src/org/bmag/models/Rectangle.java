@@ -2,7 +2,7 @@ package org.bmag.models;
 
 import org.bmag.exceptions.InvalidInputException;
 
-public class Rectangle {
+public class Rectangle implements Shape{
 
     private int length;
     private int breadth;

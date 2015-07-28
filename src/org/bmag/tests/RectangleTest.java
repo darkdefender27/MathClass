@@ -34,5 +34,5 @@ public class RectangleTest {
 
         assertEquals(expPerim, calculatedPerim);
     }
-    
+
 }
