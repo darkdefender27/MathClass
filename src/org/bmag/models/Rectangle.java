@@ -8,7 +8,7 @@ public class Rectangle {
     private int breadth;
 
     public Rectangle(int length, int breadth) {
-        if(this.length<=0 || this.breadth<=0) {
+        if(length<=0 || breadth<=0) {
             throw new InvalidInputException("NEGATIVE INPUTS!");
         }
         else {
@@ -22,5 +22,9 @@ public class Rectangle {
 
         area = this.length*this.breadth;
         return area;
+    }
+
+    public int calculatePerimeter() {
+        return this.breadth+this.length;
     }
 }

@@ -8,6 +8,11 @@ import static org.junit.Assert.*;
 
 public class RectangleTest {
 
+    @Test(expected = InvalidInputException.class)
+    public void testInvalidInputs() {
+        Rectangle rect1 = new Rectangle(-1, 1);
+    }
+
     @Test
     public void testAreaOfRectangle() {
 
@@ -19,9 +24,15 @@ public class RectangleTest {
         assertEquals(expectedArea, calculatedArea);
     }
 
-    @Test(expected = InvalidInputException.class)
-    public void testInvalidInputs() {
-        Rectangle rect1 = new Rectangle(-1, 1);
-    }
+    @Test
+    public void testPerimeterOfRectangle() {
 
+        Rectangle r = new Rectangle(1, 1);
+
+        int expPerim = 2;
+        int calculatedPerim = r.calculatePerimeter();
+
+        assertEquals(expPerim, calculatedPerim);
+    }
+    
 }
